@@ -7,9 +7,6 @@
     tools:context=".MainActivity">
 
 
-
-
-
     <TextView
         android:id="@+id/solution_tv"
         android:layout_width="match_parent"
@@ -19,7 +16,6 @@
         android:layout_marginTop="@dimen/layoutMargins"
         android:layout_marginEnd="@dimen/layoutMargins"
         android:layout_marginBottom="@dimen/layoutMargins"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/md_theme_light_outline"
         android:textSize="32dp" />
@@ -29,10 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/buttons_layout"
-        android:layout_marginStart="@dimen/layoutMargins"
-        android:layout_marginTop="@dimen/layoutMargins"
-        android:layout_marginEnd="@dimen/layoutMargins"
-        android:layout_marginBottom="@dimen/layoutMargins"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/md_theme_dark_onErrorContainer"
@@ -276,9 +272,9 @@
                 android:layout_width="@dimen/btnheight"
                 android:layout_height="@dimen/btnheight"
                 android:layout_margin="@dimen/margins"
-                android:text="@string/AC"
+                android:text="AC"
                 android:textColor="@color/design_default_color_on_primary"
-                android:textSize="@dimen/numberSize"
+                android:textSize="21dp"
                 android:backgroundTint="@color/md_theme_dark_outlineVariant"
                 app:cornerRadius="@dimen/cornerRadius" />
 

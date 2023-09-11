@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import org.mozilla.javascript.Context;
-import org.mozilla.javascript.Script;
 import org.mozilla.javascript.Scriptable;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -47,11 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignId(button9, R.id.button_9);
         assignId(buttonAc, R.id.button_ac);
         assignId(buttonDot, R.id.button_decimal_point);
-
-
-
-
-
     }
 
     void assignId(MaterialButton btn, int id){
@@ -71,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if(buttonText.equals("=")){
-            solutionTv.setText((resultTv.getText()));
+            solutionTv.setText(resultTv.getText());
             return;
         }
         if(buttonText.equals("C")){
@@ -93,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String getResult(String data){
         try{
             Context context = Context.enter();
-            //context.setOptimizationLevel(-1);
+            context.setOptimizationLevel(-1);
             Scriptable scriptable = context.initStandardObjects();
             String finalResult = context.evaluateString(scriptable, data, "Javascript", 1, null).toString();
             if(finalResult.endsWith(".0")){
