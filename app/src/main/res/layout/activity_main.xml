@@ -19,7 +19,7 @@
         android:layout_marginTop="@dimen/layoutMargins"
         android:layout_marginEnd="@dimen/layoutMargins"
         android:layout_marginBottom="@dimen/layoutMargins"
-        android:text=""
+        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/md_theme_light_outline"
         android:textSize="32dp" />
@@ -33,7 +33,7 @@
         android:layout_marginTop="@dimen/layoutMargins"
         android:layout_marginEnd="@dimen/layoutMargins"
         android:layout_marginBottom="@dimen/layoutMargins"
-        android:text=""
+        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/md_theme_dark_onErrorContainer"
         android:textSize="64dp" />
