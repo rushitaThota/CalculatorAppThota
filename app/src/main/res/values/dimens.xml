@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activity_horizontal_marin">16dp</dimen>
+    <dimen name="btnheight">72dp</dimen>
+    <dimen name="margins">12dp</dimen>
+    <dimen name="numberSize">32dp</dimen>
+    <dimen name="layoutMargins">16dp</dimen>
+    <dimen name="cornerRadius">36dp</dimen>
+
+
 </resources>
