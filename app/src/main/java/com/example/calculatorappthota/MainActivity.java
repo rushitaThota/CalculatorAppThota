@@ -24,8 +24,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         resultTv = findViewById(R.id.result_tv);
+        /*
+        Extra Feature 1: I added a text box above the final calculation output text box
+        in order for the app to be more user convenient. I was able to do so by researching
+        online and finding websites dedicated to android app development. (abhiandroid - website)
+         */
         solutionTv = findViewById(R.id.solution_tv);
+        /*
+        Extra Feature 2: Another one of the additional features I added was having a button for each number
+        and mathematical operation. I was able to learn the in's and out's of how to tackle multiple
+        multiple buttons through online tutorials of how to connect the id so that when each button is
+        clicked the correct mathematical operation takes place.
 
+         */
         assignId(buttonC, R.id.button_c);
         assignId(buttonBrackOpen, R.id.button_open_bracket);
         assignId(buttonBrackClose, R.id.button_close_bracket);
@@ -48,6 +59,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignId(buttonDot, R.id.button_decimal_point);
     }
 
+    /*
+    Title: Easy Tuto
+    Purpose: Assigns each button with it's correct ID
+    and also procedes to follow the sequences needed for
+    each particular button when clicked by user.
+     */
     void assignId(MaterialButton btn, int id){
         btn = findViewById(id);
         btn.setOnClickListener(this);
@@ -77,6 +94,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         solutionTv.setText(dataToCalculate);
 
+        /*
+        Extra Feature 3: Without using if-else statements, I learned to include a
+        dependency(library module) in the Gradle which allowed me to be more efficient in
+        my code with it calculating all mathematical operations. This further allowed me to
+        output the final result of the calculation without the user clicking a "submit" or "see
+        results" type of button, thus making the user experience run more smoothly.
+         */
         String finalResult = getResult(dataToCalculate);
 
         if(!finalResult.equals("Error")){
@@ -84,10 +108,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /*
+    Title: Easy Tuto
+    Purpose: Context is used to get "information" about the MainActivity, providing it
+    access to various functionalities(newly-created object understands what's going on).
+
+     */
     String getResult(String data){
         try{
             Context context = Context.enter();
-            context.setOptimizationLevel(-1);
+            context.setOptimizationLevel(-1); //
             Scriptable scriptable = context.initStandardObjects();
             String finalResult = context.evaluateString(scriptable, data, "Javascript", 1, null).toString();
             if(finalResult.endsWith(".0")){

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -65,8 +66,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_open_bracket"
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-                android:layout_width="@dimen/btnheight"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton" android:layout_width="@dimen/btnheight"
                 android:layout_height="@dimen/btnheight"
                 android:layout_margin="@dimen/margins"
                 android:text="("
